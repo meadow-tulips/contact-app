@@ -5,33 +5,18 @@
 #include <map>
 #include <vector>
 #include "./Contact.hpp"
-#include "./utils.h"
 class ContactBook
 {
-    std::ifstream fileObject;
-    std::map<std::string, Contact> dictionary;
+    std::map<std::string, Contact> dictionary = std::map<std::string, Contact>();
     std::string filePath;
 
 public:
+    ContactBook(const std::string _filepath);
+    ~ContactBook();
+    void addNewContact(Contact);
+    void deleteContactByName(std::string name);
     void displayContactBook();
-    inline ContactBook(const std::string _filepath)
-    {
-        filePath = "./ContactsStore/" + _filepath + ".csv";
-        fileObject = std::ifstream(filePath);
-        std::string str = "";
-        while (getline(fileObject, str))
-        {
-            trimUnecessities(str);
-            std::vector<std::string> individualContactStrings;
-            splitString(str, ' ', individualContactStrings);
-
-            if (individualContactStrings.size() > 2)
-            {
-                Contact c(individualContactStrings[0], individualContactStrings[1], individualContactStrings[2]);
-                dictionary.insert({ individualContactStrings[0], c });
-            }
-        }
-    }
+    void listContactsByName(std::string);
 };
 
 #endif

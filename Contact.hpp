@@ -9,13 +9,11 @@ class Contact {
 
  
     public:
-       Contact(const std::string _name, const std::string _phoneNumber, const std::string _email = "") {
-        phoneNumber = _phoneNumber;
-        name = _name;
-        email = _email;
-     };
-    
-        void displayContact();
-};
+         Contact(const std::string _name, const std::string _phoneNumber, const std::string _email = "");
+         void displayContact();
+         std::string getName();
+         std::string getPhoneNumber();
+         std::string getEmail();
+   };
 
 #endif

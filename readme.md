@@ -1,9 +1,8 @@
 # 📒 Contact Book (Modern C++ Project)
 
-A simple CLI-based Contact Book built using modern C++ (C++17/20), featuring:
+A simple CLI-based Contact Book built using modern C++ (C++20), featuring:
 
 - Clean object-oriented design
-- Smart pointers (`unique_ptr`)
 - RAII-style file handling
 - STL containers (`map`, `vector`)
 - File I/O for persistence
@@ -36,10 +35,10 @@ A simple CLI-based Contact Book built using modern C++ (C++17/20), featuring:
 ## 🛠️ Build & Run
 
 ### Prerequisites
-- C++17 or above (tested on C++20)
+- C++20 or above
 - g++, clang++, or MSVC
 
 ### Compile (Linux/Mac)
 ```bash
-g++ -std=c++17 -o contact_book main.cpp ContactBook.cpp Contact.cpp
+g++ -std=c++20 -o contact_book main.cpp ContactBook.cpp Contact.cpp utils.cpp
 ./contact_book
