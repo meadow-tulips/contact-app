@@ -15,7 +15,7 @@ class Contact {
         email = _email;
      };
     
-    void displayContact();
+        void displayContact();
 };
 
 #endif

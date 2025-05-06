@@ -5,9 +5,11 @@
 int main()
 {
 
-    Contact contact1("Ramesh", "93293339");
-    contact1.displayContact();
+    // Contact contact1("Ramesh", "93293339");
+    // contact1.displayContact();
 
     ContactBook phoneBook("pb1");
+
+    phoneBook.displayContactBook();
     return 0;
 }
